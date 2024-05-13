@@ -13,11 +13,12 @@ public class Consumer<T> {
     private static final Logger LOGGER = LoggerFactory.getLogger(Consumer.class);
 
     @KafkaListener(
-            topics = "${spring.kafka.topic.name}"
-            ,groupId = "${spring.kafka.consumer.group-id}"
+            topics = "${spring.kafka.topic.name}",
+            groupId = "${spring.kafka.consumer.group-id}"
     )
     public void consume(Event<T> event){
-        LOGGER.info(String.format("Event received => %s", event.toString()));
+        String logMessage = String.format("Event received: %s", event.toString());
+        LOGGER.info(logMessage);
 
         // process as needed
     }

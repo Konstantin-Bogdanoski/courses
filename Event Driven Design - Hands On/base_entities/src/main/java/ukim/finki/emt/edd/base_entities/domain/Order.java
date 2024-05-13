@@ -11,6 +11,6 @@ import lombok.NoArgsConstructor;
 public class Order {
     private String id;
     private String name;
-    private int qty;
+    private int quantity;
     private double price;
 }

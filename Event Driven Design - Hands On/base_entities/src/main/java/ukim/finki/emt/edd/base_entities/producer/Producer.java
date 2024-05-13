@@ -25,12 +25,14 @@ public class Producer<T> {
     }
 
     public void sendMessage(Event<T> event){
-        LOGGER.info(String.format("Event => %s", event.toString()));
+        String logMessage = String.format("Event: %s", event.toString());
+        LOGGER.info(logMessage);
 
         Message<Event<T>> message = MessageBuilder
                 .withPayload(event)
                 .setHeader(KafkaHeaders.TOPIC, topic.name())
                 .build();
+
         kafkaTemplate.send(message);
     }
 }

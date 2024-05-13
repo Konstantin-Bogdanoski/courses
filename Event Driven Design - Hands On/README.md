@@ -62,13 +62,15 @@ This README provides a comprehensive guide to setting up and running the project
 2. **Java Installation**: Ensure Java is installed on your system. This project is configured with Java 21.
 
 ## Setting up the Project
-1. **Open Project in IntelliJ**: Open IntelliJ IDEA and import the project.
+1. **Clone the project**: Clone the whole git repo, or just clone this subfolder using `git sparse checkout` [git.com/sparse-checkout](https://git-scm.com/docs/git-sparse-checkout)
 
-2. **Load Maven Components**:
+2. **Open Project in IntelliJ**: Open IntelliJ IDEA and import the project.
+
+3. **Load Maven Components**:
     - Once the project is imported, IntelliJ will automatically start loading Maven components.
     - Make sure all dependencies are successfully resolved.
 
-3. **Configure Spring Boot**:
+4. **Configure Spring Boot**:
     - Set up SpringBoot configurations to start these services simultaneously - `email_service`, `inventory_service`, `order_service`.
 If unable to, just start each service manually.
 
